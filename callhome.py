@@ -14,8 +14,6 @@ def main():
     }
     headers = {'Api-Token': API_TOKEN, 'Api-Secret-Key': API_SECRET}
     post = requests.post(PAYLOAD_URL, json=report_obj, headers=headers)
-    print(post.status_code)
-
 
 
 if __name__ == "__main__":
