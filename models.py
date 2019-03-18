@@ -53,6 +53,10 @@ class ServerReport():
         # Filesystems array
         self.filesystems = Filesystem()._get_filesystems()
 
+        # Load average
+        import os
+        self.load_average = os.getloadavg()
+
 
     def to_dict(self):
         '''
@@ -62,5 +66,6 @@ class ServerReport():
             'hostname': self.hostname,
             'uptime': self.uptime,
             'filesystems': self.filesystems,
+            'load_average': self.load_average,
         }
 
